@@ -9,6 +9,7 @@ public class Notes {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    // No cascade specified. It means if nodes object deleted, recipe object will remain on the database
     @OneToOne // no cascade means Recipe entity owns Node entity
     private Recipe recipe;
 
